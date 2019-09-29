@@ -1,6 +1,6 @@
 class IdeaBoxApp < Sinatra::Base
-  not_found do
-    erb :error
+  configure :development do
+    register Sinatra::Reloader
   end
 
   get '/' do
